@@ -5,12 +5,15 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
 class SkillGapAppTest(unittest.TestCase):
     def setUp(self):
-        # Setup Chrome driver (ensure chromedriver is installed or use webdriver_manager)
+        # Setup Chrome driver automatically
         options = webdriver.ChromeOptions()
-        options.add_argument('--headless') # Run headless for automated testing
-        self.driver = webdriver.Chrome(options=options)
+        # options.add_argument('--headless') # Run headless for automated testing
+        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
         self.driver.implicitly_wait(10)
         self.base_url = "http://localhost:80" # URL of the frontend
 
