@@ -49,7 +49,7 @@ export default function Layout() {
             {'HR'.split(' ').map(n => n[0]).join('')}
           </div>
           <div className="sidebar-footer-info">
-            <h4>Hussnain Raza</h4>
+            <h4>Kumail Raza</h4>
             <p>BS CS · Sem 8</p>
           </div>
         </div>

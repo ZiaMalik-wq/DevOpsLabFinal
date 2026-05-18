@@ -3,7 +3,7 @@
  * Falls back to mock data if the backend is unavailable.
  */
 
-const API_BASE = 'http://localhost:8080/api';
+const API_BASE = '/api';
 const USER_ID = 1; // Default user
 
 async function apiFetch(endpoint) {
